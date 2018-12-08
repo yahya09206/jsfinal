@@ -9,7 +9,7 @@ var jumpButton;
 var text;
 var winningMessage;
 var won = false;
-var currentScore = 90;
+var currentScore = 0;
 var winningScore = 100;
 
 // add collectable items to the game
@@ -21,7 +21,7 @@ function addItems() {
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(450, 150, 'platform');
+  platforms.create(450, 550, 'platform');
   platforms.setAll('body.immovable', true);
 }
 
