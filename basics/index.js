@@ -13,6 +13,7 @@
 	// 'var' keyword
 	// name of variable
 	// '=' what you want the value to be
+	// Variables can't start with symbols other than $ or _
 
 // There are 5 different datatypes
 	// Number - Floating point numbers, for decimals and integers
@@ -25,6 +26,13 @@
 var firstName = 'John';	
 var age = 28;
 var fullAge = true;
+
+// Undefined variable
+var job;
+console.log(job);
+// Fixed
+job = 'Teacher';
+console.log(job);
 
 // Write to the console
 console.log(fullAge);
