@@ -23,6 +23,9 @@
 	// Undefined - Data type of a variable that does not have a value yet
 	// Null - Also means 'non existent'
 
+/******************
+	Variables
+******************/
 // Variable Declaration
 var firstName = 'John';	
 var age = 28;
@@ -37,3 +40,9 @@ console.log(job);
 
 // Write to the console
 console.log(fullAge);
+
+/******************
+*Mutation & Type Coercion
+******************/
+var firstName = 'john';
+var age = 28;
