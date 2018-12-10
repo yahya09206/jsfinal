@@ -13,7 +13,8 @@
 	// 'var' keyword
 	// name of variable
 	// '=' what you want the value to be
-	// Variables can't start with symbols other than $ or _
+	// Variables can't start with symbols other than $ or _ letters
+	// Can't use reserved words as variable names such as 'function'
 
 // There are 5 different datatypes
 	// Number - Floating point numbers, for decimals and integers
