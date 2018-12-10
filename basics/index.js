@@ -20,7 +20,11 @@
 	// Boolean - Logical data type that can only be true or false
 	// Undefined - Data type of a variable that does not have a value yet
 	// Null - Also means 'non existent'
+
+// Variable Declaration
 var firstName = 'John';	
+var age = 28;
+var fullAge = true;
 
 // Write to the console
-console.log(firstName);
+console.log(fullAge);
