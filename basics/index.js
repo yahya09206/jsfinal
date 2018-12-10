@@ -15,6 +15,7 @@
 	// '=' what you want the value to be
 	// Variables can't start with symbols other than $ or _ letters
 	// Can't use reserved words as variable names such as 'function'
+	// Can init multiple variables on the same line then declare on different lines
 
 // There are 5 different datatypes
 	// Number - Floating point numbers, for decimals and integers
@@ -44,5 +45,14 @@ console.log(fullAge);
 /******************
 *Mutation & Type Coercion
 ******************/
+// What is type coercion
+	// JS automatically converts types to where it's needed
+
 var firstName = 'john';
 var age = 28;
+console.log(firstName + ' ' + age);
+
+var job, isMarried;
+job = 'teacher';
+isMarried = false;
+console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
