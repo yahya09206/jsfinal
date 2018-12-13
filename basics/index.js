@@ -60,12 +60,31 @@ console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? 
 // Mutation
 age = 'twenty eight';
 job = 'driver';
-alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
-var lastName = prompt("What is his last name?");
-console.log(firstName + ' ' + lastName);
+// alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+// var lastName = prompt("What is his last name?");
+// console.log(firstName + ' ' + lastName);
 
 /******************
 Basic Operators
 ******************/
+var year, yearJohn, yearMark;
+var year = 2018;
+ageJohn = 28;
+ageMark = 33;
+
+yearJohn = year - ageJohn;
+yearMark = year - ageMark;
+
+console.log(yearJohn);
+console.log(year + 2);
+console.log(year * 2);
+
+//Logical operators
+var jonhOlder = ageJohn < ageMark;
+console.log(jonhOlder);
+
+//typeof operator tells you which datatype it is
+console.log(typeof jonhOlder);
+console.log(typeof ageJohn);
 
 
