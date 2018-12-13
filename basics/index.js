@@ -27,65 +27,65 @@
 /******************
 	Variables
 ******************/
-// Variable Declaration
-var firstName = 'John';	
-var age = 28;
-var fullAge = true;
+// // Variable Declaration
+// var firstName = 'John';	
+// var age = 28;
+// var fullAge = true;
 
-// Undefined variable
-var job;
-console.log(job);
-// Fixed
-job = 'Teacher';
-console.log(job);
+// // Undefined variable
+// var job;
+// console.log(job);
+// // Fixed
+// job = 'Teacher';
+// console.log(job);
 
-// Write to the console
-console.log(fullAge);
+// // Write to the console
+// console.log(fullAge);
 
-/******************
-*Mutation & Type Coercion
-******************/
-// What is type coercion
-	// JS automatically converts types to where it's needed
+// /******************
+// *Mutation & Type Coercion
+// ******************/
+// // What is type coercion
+// 	// JS automatically converts types to where it's needed
 
-var firstName = 'john';
-var age = 28;
-console.log(firstName + ' ' + age);
+// var firstName = 'john';
+// var age = 28;
+// console.log(firstName + ' ' + age);
 
-var job, isMarried;
-job = 'teacher';
-isMarried = false;
-console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+// var job, isMarried;
+// job = 'teacher';
+// isMarried = false;
+// console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
 
-// Mutation
-age = 'twenty eight';
-job = 'driver';
-// alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
-// var lastName = prompt("What is his last name?");
-// console.log(firstName + ' ' + lastName);
+// // Mutation
+// age = 'twenty eight';
+// job = 'driver';
+// // alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+// // var lastName = prompt("What is his last name?");
+// // console.log(firstName + ' ' + lastName);
 
-/******************
-Basic Operators
-******************/
-var year, yearJohn, yearMark;
-var year = 2018;
-ageJohn = 28;
-ageMark = 33;
+// /******************
+// Basic Operators
+// ******************/
+// var year, yearJohn, yearMark;
+// var year = 2018;
+// ageJohn = 28;
+// ageMark = 33;
 
-yearJohn = year - ageJohn;
-yearMark = year - ageMark;
+// yearJohn = year - ageJohn;
+// yearMark = year - ageMark;
 
-console.log(yearJohn);
-console.log(year + 2);
-console.log(year * 2);
+// console.log(yearJohn);
+// console.log(year + 2);
+// console.log(year * 2);
 
-//Logical operators
-var jonhOlder = ageJohn < ageMark;
-console.log(jonhOlder);
+// //Logical operators
+// var jonhOlder = ageJohn < ageMark;
+// console.log(jonhOlder);
 
-//typeof operator tells you which datatype it is
-console.log(typeof jonhOlder);
-console.log(typeof ageJohn);
+// //typeof operator tells you which datatype it is
+// console.log(typeof jonhOlder);
+// console.log(typeof ageJohn);
 
 /******************
 Operator Precedence
@@ -94,6 +94,14 @@ var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
 
-var isFullAge = now - yearJohn >= fullAge;
+// Multiple operators
+var isFullAge = now - yearJohn >= fullAge; // true
+console.log(isFullAge);
+
+//Average
+var ageJohn = now - yearJohn;
+var ageMark = 35;
+var average = (ageJohn + ageMark) / 2;
+console.log(average);
 
 
