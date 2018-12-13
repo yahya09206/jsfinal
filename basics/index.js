@@ -87,4 +87,13 @@ console.log(jonhOlder);
 console.log(typeof jonhOlder);
 console.log(typeof ageJohn);
 
+/******************
+Operator Precedence
+******************/
+var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+
+var isFullAge = now - yearJohn >= fullAge;
+
 
