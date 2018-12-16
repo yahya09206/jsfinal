@@ -90,23 +90,31 @@
 /******************
 Operator Precedence
 ******************/
-var now = 2018;
-var yearJohn = 1989;
-var fullAge = 18;
+// var now = 2018;
+// var yearJohn = 1989;
+// var fullAge = 18;
 
-// Multiple operators
-var isFullAge = now - yearJohn >= fullAge; // true
-console.log(isFullAge);
+// // Multiple operators
+// var isFullAge = now - yearJohn >= fullAge; // true
+// console.log(isFullAge);
 
-//Average
-var ageJohn = now - yearJohn;
-var ageMark = 35;
-var average = (ageJohn + ageMark) / 2;
-console.log(average);
+// //Average
+// var ageJohn = now - yearJohn;
+// var ageMark = 35;
+// var average = (ageJohn + ageMark) / 2;
+// console.log(average);
 
-// Multiple assignments
-var x, y;
-x = y = (3 + 5) * 4 - 6;
-console.log(x, y);
+// // Multiple assignments
+// var x, y;
+// x = y = (3 + 5) * 4 - 6;
+// console.log(x, y);
+
+/******************
+Control Structures
+******************/
+// Controls how your program is written
+
+var firstName = 'John';
+var civilStatus = 'single';
 
 
