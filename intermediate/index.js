@@ -2,6 +2,8 @@
 	// Used for repeating while keeping code clean and compact
 	// Can pass 0-multiple arguments aka parameters and then return something from the function
 	// Follow the DRY principle
+	// Functions can call other functions
+	// Don't have to return anything
 function calculateAge(birthYear){	
 	return 2019 - birthYear;
 }
