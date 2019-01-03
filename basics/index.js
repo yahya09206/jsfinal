@@ -178,6 +178,17 @@ switch(job) {
 /******************
 Truthy & Falsy values and equality operators
 ******************/
+// falsy values: undefined, null, 0, '', NaN
+// truthy values: NOT falsy values
+
+var height;
+height = 23;
+
+if(height){
+	console.log('variable is defined');
+}else{
+	console.log('variable has not been defined');
+}
 
 
 
