@@ -171,7 +171,13 @@ switch(job) {
 	case 'designer':
 		console.log(firstName + ' designs beautiful websites');
 		break;
+	default:
+		console.log(firstName + ' does something else');
 }
+
+/******************
+Truthy & Falsy values and equality operators
+******************/
 
 
 
