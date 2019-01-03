@@ -147,6 +147,7 @@ if(age < 13){
 /******************
 Ternary Operator & switch statements
 ******************/
+// Used for simple conditions to keep code more compact
 var firstName = 'John';
 var age = 16;
 
@@ -154,6 +155,25 @@ age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + '
 
 var drink = age >= 18 ? 'beer' : 'juice';
 console.log(drink);
+
+/******************
+Switch Statement
+******************/
+
+var job = 'teacher'
+switch(job) {
+	case 'teacher':
+		console.log(firstName + ' teaches kids how to code');
+		break;
+	case 'driver':
+		console.log(firstName + ' drive an uber in Lisbon');
+		break;
+	case 'designer':
+		console.log(firstName + ' designs beautiful websites');
+		break;
+}
+
+
 
 
 
