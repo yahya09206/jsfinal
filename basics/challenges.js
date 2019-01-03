@@ -7,3 +7,5 @@ var markBMI = 135 / (markHeight * markHeight);
 var result = johnBMI < markBMI;
 console.log(result);
 
+// Challenge 2
+
