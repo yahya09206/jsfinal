@@ -21,3 +21,19 @@ function yearsUntilRetirement(year, firstName){
 yearsUntilRetirement(1990, 'John');
 
 // Function Statements and Expressions
+
+//function expression doesnt have a name and is declared within a variable
+var whatDoYouDo = function(job, firstName){
+	switch(job) {
+		case 'teacher':
+			return firstName + ' teaches kids how to code';
+		case 'driver':
+			return firstName + ' drives trucks like macminded';
+		case 'designer':
+			return firstName + ' designs beautiful websites';
+		default:
+			return firstName + ' does something else';
+	}
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
