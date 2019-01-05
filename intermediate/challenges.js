@@ -7,4 +7,7 @@ function tipCalculator(bill) {
 	}else{
 		percentage = .1
 	}
+	return percentage * bill;
 }
+tipCalculator(100);
+console.log(tipCalculator(10));
