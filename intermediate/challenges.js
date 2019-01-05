@@ -1,3 +1,4 @@
+//Challenge 1
 function tipCalculator(bill) {
 	var percentage;
 	if (bill < 50) {
