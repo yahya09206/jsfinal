@@ -68,6 +68,13 @@ console.log(john);
 //'indexOf' is used to test/find if element is inside of array
 console.log(john.indexOf(1990));
 
-//Object and Properties
+//Objects and Properties
+var john = {
+	firstName: 'John',
+	lastName: 'Smith',
+	birthYear: 1990,
+	family: ['Jane', 'Mark', 'Bob', 'Emily'],
+
+}
 
 
