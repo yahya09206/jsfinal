@@ -74,7 +74,15 @@ var john = {
 	lastName: 'Smith',
 	birthYear: 1990,
 	family: ['Jane', 'Mark', 'Bob', 'Emily'],
+	job: 'teacher',
+	isMarried: false
+};
+//Dot notation
+console.log(john.firstName);
+//Bracket notation
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
 
-}
 
 
