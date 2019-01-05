@@ -19,3 +19,5 @@ function yearsUntilRetirement(year, firstName){
 }
 
 yearsUntilRetirement(1990, 'John');
+
+// Function Statements and Expressions
