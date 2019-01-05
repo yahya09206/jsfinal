@@ -53,5 +53,12 @@ names[1] = 'Ben';
 names[names.length] = 'Mary'
 console.log(names);
 
+// Different data types
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue');
+john.unshift('Mr.');
+console.log(john);
+
 
 
