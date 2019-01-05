@@ -21,3 +21,39 @@ var finalValue = [bills[0] + tips[0],
 				  bills[1] + tips[1],
 				  bills[2] + tips[2]];
 console.log(tips, finalValue);
+
+//BMI calculator
+var john = {
+	fullName: 'John Smith',
+	mass: 92,
+	height: 1.95,
+	calcBMI: function(){
+		this.bmi = this.mass / (this.height * this.height)
+		return this.bmi;
+	}
+}
+
+var mark = {
+	fullName: 'Mark Smith',
+	mass: 80,
+	height: 1.6,
+	calcBMI: function(){
+		this.bmi = this.mass / (this.height * this.height)
+		return this.bmi;
+	}
+}
+john.calcBMI();
+mark.calcBMI();
+console.log(john, mark);
+
+switch(true){
+	case john.bmi > mark.bmi:
+		console.log('John has a higher bmi');
+		break;
+	case john.bmi < mark.bmi:
+		console.log('Mark has a higher bmi');
+		break;
+	default:
+		console.log('Their BMIs are the same');
+		break;
+}
