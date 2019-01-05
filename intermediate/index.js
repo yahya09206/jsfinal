@@ -48,5 +48,10 @@ console.log(names[0]);
 console.log(names);
 console.log(names.length);
 
+//Change value of certain item in array
+names[1] = 'Ben';
+names[names.length] = 'Mary'
+console.log(names);
+
 
 
