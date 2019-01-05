@@ -37,3 +37,7 @@ var whatDoYouDo = function(job, firstName){
 }
 
 console.log(whatDoYouDo('teacher', 'John'));
+
+// Arrays
+	//Arrays allow you to store more values in one single variable
+var names = 
