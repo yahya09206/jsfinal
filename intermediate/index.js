@@ -110,5 +110,8 @@ var john = {
 john.calcAge();
 console.log(john);
 
+//Loops and iterations
+
+
 
 
