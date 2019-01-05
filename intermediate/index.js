@@ -40,4 +40,11 @@ console.log(whatDoYouDo('teacher', 'John'));
 
 // Arrays
 	//Arrays allow you to store more values in one single variable
-var names = 
+	//Arrays are 0 based
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+
+
+
