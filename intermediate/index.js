@@ -120,4 +120,13 @@ for (var i = 0; i < john.length; i++) {
 	console.log(john[i]);
 }
 
+//While loop
+var i = 0;
+while(i < john.length){
+	console.log(john[i]);
+	i++;
+}
+
+// Continue and break statements
+
 
