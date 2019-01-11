@@ -20,5 +20,12 @@ activePlayer = 1;
 dice = Math.floor(Math.random() * 6) + 1;
 
 //Selecting elements from webpage using DOM
-// document.querySelector('#current-' + activePlayer).textContent = dice;
-document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+document.querySelector('#current-' + activePlayer).textContent = dice;
+
+// Read elements from webpage then store inside variable aka getter
+var x = document.querySelector('#score-0').textContent;
+console.log(x);
+
+//Use query selector to change element of css
+document.querySelector('.dice').style.display = 'none';
