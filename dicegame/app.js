@@ -14,8 +14,10 @@ var scores, roundScore, activePlayer, dice;
 
 scores = [0,0];
 roundScore = 0;
-activePlayer = 0;
+activePlayer = 1;
 
 // Generate random number for dice
 dice = Math.floor(Math.random() * 6) + 1;
-console.log(dice);
+
+//Selecting elements from webpage using DOM
+document.querySelector('#current-' + activePlayer).textContent = dice;
