@@ -14,7 +14,7 @@ var scores, roundScore, activePlayer;
 
 scores = [0,0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 
 //Use query selector to change element of css
 document.querySelector('.dice').style.display = 'none';
@@ -41,8 +41,11 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		if (dice !== 1) {
 			//Add score
 			roundScore += dice;
+			//Display roundScore
+			document.querySelector('#current-' + activePlayer).textContent = roundScore;
 		}else{
 			//Next player
+			activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 		}
 });
 
