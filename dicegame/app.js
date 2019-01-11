@@ -10,8 +10,12 @@ GAME RULES:
 */
 
 // Variables for game
-var scores, roundScore, activePlayer;
+var scores, roundScore, activePlayer, dice;
 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
+
+// Generate random number for dice
+dice = Math.floor(Math.random() * 6) + 1;
+console.log(dice);
