@@ -46,6 +46,19 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		}else{
 			//Next player
 			activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+			//Set roundscore back to 0
+			roundScore = 0;
+			//Set current player score to 0
+			document.getElementById('current-0').textContent = '0';
+			document.getElementById('current-1').textContent = '0';
+			//Toggle active class
+			document.querySelector('.player-0-panel').classList.toggle('active');
+			document.querySelector('.player-1-panel').classList.toggle('active');
+
+			//Remove active class
+			// document.querySelector('.player-0-panel').classList.remove('active');
+			//Add active class to other panel
+			// document.querySelector('.player-1-panel').classList.add('active');
 		}
 });
 
