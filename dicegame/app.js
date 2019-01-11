@@ -10,22 +10,35 @@ GAME RULES:
 */
 
 // Variables for game
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 1;
 
-// Generate random number for dice
-dice = Math.floor(Math.random() * 6) + 1;
+//Use query selector to change element of css
+document.querySelector('.dice').style.display = 'none';
+
+// Hide dice on page load
+document.querySelector('.btn-roll').addEventListener('click', function(){
+	//1. random number
+		// Generate random number for dice
+		var dice = Math.floor(Math.random() * 6) + 1;
+
+	//2. display result
+		var diceDOM = document.querySelector('.dice');
+		// match dice result with match picture
+		diceDOM.style.display = 'block';
+		diceDOM.src = 'dice-' + dice + '.png';
+
+	//3. update round score only if rolled number was not a 1
+});
+
 
 //Selecting elements from webpage using DOM
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-document.querySelector('#current-' + activePlayer).textContent = dice;
+// document.querySelector('#current-' + activePlayer).textContent = dice;
 
 // Read elements from webpage then store inside variable aka getter
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
-
-//Use query selector to change element of css
-document.querySelector('.dice').style.display = 'none';
+// var x = document.querySelector('#score-0').textContent;
+// console.log(x);
