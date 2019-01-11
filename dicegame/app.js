@@ -59,7 +59,15 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 			// document.querySelector('.player-0-panel').classList.remove('active');
 			//Add active class to other panel
 			// document.querySelector('.player-1-panel').classList.add('active');
+			//Hide dice when player rolls a 1
+			document.querySelector('.dice').style.display = 'none';
+
 		}
+});
+
+//Button hold function
+document.querySelector('.btn-hold').addEventListener('click', function(){
+	//Add current score to players global score
 });
 
 
