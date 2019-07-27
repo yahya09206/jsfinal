@@ -1,6 +1,7 @@
 // Advance Objects and Functions
 
 // Function Constructor
+/*
 var john = {
 	name: 'John',
 	yearOfBirth: 1991,
@@ -34,4 +35,13 @@ mark.calculateAge();
 console.log(john.lastName);
 console.log(jane.lastName);
 console.log(mark.lastName);
+*/
 
+// Inheritance using Object.create
+var personProto = {
+	calculateAge: function(){
+		console.log(2019 - this.yearOfBirth);
+	}
+};
+
+var john = Object.create(personProto);
