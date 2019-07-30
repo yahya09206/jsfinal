@@ -26,4 +26,17 @@ var emily = {
 
 john.presentation('formal', 'morning');
 
+// Call method allows us to use it as a 'this' variables
 john.presentation.call(emily, 'friendly', 'afternoon');
+
+// Apply method allows us to our arguments inside of arrays
+// john.presentation.apply(emily, ['friendly', 'afternoon']);
+
+var johnFriendly = john.presentation.bind(emily, 'friendly');
+
+johnFriendly('morning');
+johnFriendly('night');
+
+
+
+
