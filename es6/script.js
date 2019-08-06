@@ -105,3 +105,20 @@ var box5 = {
 }
 
 box5.clickMe();
+
+// ES6 Syntax using 'this' keyword
+// Arrow function shares lexical this keyword in its functions
+const box6 = {
+	color: 'green',
+	position: 1,
+	clickMe: function(){
+		// Attach event handler to element
+		document.querySelector('.green').addEventListener('click', () => 
+		{
+			var str = 'This box number ' + this.position + ' and it is ' + this.color;
+			alert(str);
+		});
+	}
+}
+
+box6.clickMe();
