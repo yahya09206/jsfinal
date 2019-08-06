@@ -33,9 +33,18 @@ function driverLicense6(passedTest) {
 	if (passedTest) {
 		let firstName = 'John';
 		const yearOfBirth = 1990;
-	}
 	console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car');
+	}
 }
 driverLicense6(true);
 
 // IIFE'S
+// A block is not restricted to for loops and if statements
+
+{
+	const a = 1;
+	let b = 2;
+}
+// console.log(a + b);
+
+// Strings in es6
