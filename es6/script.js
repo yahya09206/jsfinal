@@ -87,4 +87,21 @@ ages6 = years.map((el, index) => {
 	const age = now - el;
 	return `Age element ${index + 1}: ${age}.`
 });
-console.log(ages6)
+console.log(ages6);
+
+// Arrow functions with lexical 'this' keyword. Share 'this' from es5
+//es5 version
+var box5 = {
+	color: 'green',
+	position: 1,
+	clickMe: function(){
+		var self = this;
+		// Attach event handler to element
+		document.querySelector('.green').addEventListener('click', function(){
+			var str = 'This box number ' + self.position + ' and it is ' + self.color;
+			alert(str);
+		});
+	}
+}
+
+box5.clickMe();
