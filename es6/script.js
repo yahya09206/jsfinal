@@ -65,3 +65,26 @@ console.log(n.includes('oh'));
 console.log(firstName.repeat(5));
 
 // Arrow functions	
+const years = [1990, 1991, 1969, 1845];
+
+//ES5
+var ages5 = years.map(function(el) {
+	return 2016 - el;
+});
+console.log(ages5);
+
+//ES6 with arrow function
+let ages6 = years.map(el => 2016 - el);
+console.log(ages6);
+
+// ES6 function with multiple params
+ages6 = years.map((el, index) => `Age element ${index + 1}: ${2019 - el}.`);
+console.log(ages6);
+
+// ES6 with more than 1 line
+ages6 = years.map((el, index) => {
+	const now = new Date().getFullYear();
+	const age = now - el;
+	return `Age element ${index + 1}: ${age}.`
+});
+console.log(ages6)
