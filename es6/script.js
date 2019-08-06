@@ -48,3 +48,12 @@ driverLicense6(true);
 // console.log(a + b);
 
 // Strings in es6
+let firstName 	= 'john';
+let lastName 	= 'smith';
+const year 		= 1991;
+function calcAge(year){
+	return 2019 - year;
+}
+
+// Template literals for es6 lets you write all text and variable inside of back ticks
+console.log(`This is ${firstName} ${lastName}`);
