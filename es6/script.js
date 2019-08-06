@@ -63,3 +63,5 @@ console.log(n.startsWith('j'));
 console.log(n.endsWith('w'));
 console.log(n.includes('oh'));
 console.log(firstName.repeat(5));
+
+// Arrow functions	
