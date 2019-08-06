@@ -37,3 +37,5 @@ function driverLicense6(passedTest) {
 	console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car');
 }
 driverLicense6(true);
+
+// IIFE'S
