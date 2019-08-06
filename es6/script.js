@@ -57,3 +57,7 @@ function calcAge(year){
 
 // Template literals for es6 lets you write all text and variable inside of back ticks
 console.log(`This is ${firstName} ${lastName}. He was born in ${year}. Today he is ${calcAge(year)} years old.`);
+
+const n = `${firstName} ${lastName}`;
+console.log(n.startsWith('j'));
+console.log(n.endsWith('w'));
