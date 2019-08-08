@@ -165,7 +165,7 @@ const {firstName, lastName} = obj;
 console.log(firstName);
 console.log(lastName);
 
-
+// Arrays in ES6
 
 
 
