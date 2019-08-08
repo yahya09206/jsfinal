@@ -152,20 +152,28 @@ var john = ['John', 26];
 // var age = john[1];
 
 // ES6 
-const [name, age] = ['John', 26];
-console.log(name);
-console.log(age);
+// const [name, age] = ['John', 26];
+// console.log(name);
+// console.log(age);
 
-const obj = {
-	firstName: 'John',
-	lastName: 'Smith'
-};
+// const obj = {
+// 	firstName: 'John',
+// 	lastName: 'Smith'
+// };
 
-const {firstName, lastName} = obj;
-console.log(firstName);
-console.log(lastName);
+// const {firstName, lastName} = obj;
+// console.log(firstName);
+// console.log(lastName);
 
 // Arrays in ES6
+const boxes = document.querySelectorAll('.box');
+
+// Return nodelist and transform into array
+// ES5
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(cur) {
+	cur.style.backgroundColor = 'dodgerblue';
+});
 
 
 
