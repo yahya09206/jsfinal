@@ -200,6 +200,21 @@ for(const cur of boxesArr6) {
 
 }
 
+// Find elements in an array using es5
+var ages = [12, 17, 8, 21, 14, 11];
+var full = ages.map(function(cur) {
+	return cur >= 18;
+});
+console.log(full);
+// Find position of element in array
+console.log(full.indexOf(true));
+// Find oldest age in array
+console.log(ages[full.indexOf(true)]);
+
+// ES6 
+console.log(ages.findIndex(cur => cur >= 18));
+console.log(ages.find(cur => cur >= 18));
+
 
 
 
