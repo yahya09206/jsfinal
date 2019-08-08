@@ -144,3 +144,36 @@ Person.prototype.myFriends5 = function(friends){
 	console.log(arr);
 }
 new Person('Mike').myFriends5(friends);
+
+// Destructoring allows us to extract data from a data structure
+// ES5
+var john = ['John', 26];
+// var name = john[0];
+// var age = john[1];
+
+// ES6 
+const [name, age] = ['John', 26];
+console.log(name);
+console.log(age);
+
+const obj = {
+	firstName: 'John',
+	lastName: 'Smith'
+};
+
+const {firstName, lastName} = obj;
+console.log(firstName);
+console.log(lastName);
+
+
+
+
+
+
+
+
+
+
+
+
+
