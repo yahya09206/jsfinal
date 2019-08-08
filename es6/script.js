@@ -215,6 +215,8 @@ console.log(ages[full.indexOf(true)]);
 console.log(ages.findIndex(cur => cur >= 18));
 console.log(ages.find(cur => cur >= 18));
 
+// Spread Operator
+
 
 
 
