@@ -245,7 +245,7 @@ const all = [h, ...boxes];
 Array.from(all).forEach(cur => cur.style.color = 'purple');
 
 
-
+// Rest parameters
 
 
 
