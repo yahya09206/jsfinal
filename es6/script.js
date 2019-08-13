@@ -312,7 +312,20 @@ if(question.has(4)) {
 
 // Clear everything from map
 // question.clear();
-question.forEach((value, key) => console.log(`This is ${key}, and it's set to ${value}`));
+// question.forEach((value, key) => console.log(`This is ${key}, and it's set to ${value}`));
+
+for (let [key, value] of question.entries()) {
+	// Only print value if key is a number
+	if (typeof(key) === 'number') {
+		console.log(`Answer ${key}:
+			${value}`);
+	}
+}
+
+// Get answer using prompt
+const ans = parseInt(prompt('Write the correct answer'));
+console.log(question.get(ans === question.get('correct')));
+
 
 
 
