@@ -263,6 +263,19 @@ function isFullAge6(...years) {
 }	
 isFullAge6(1990, 1999, 1965);
 
+// Default 
+function SmithPerson(firstName, yearOfBirth, lastName, nationality){
+	// Default Parameters using if statement
+	lastName === undefined ? lastName = 'Smith' : lastName = lastName;
+	nationality === undefined ? nationality = 'american' : nationality = nationality;
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.yearOfBirth = yearOfBirth;
+	this.nationality = nationality;
+}
+var john = new SmithPerson('John', 1990);
+
+var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
 
 
 
