@@ -304,9 +304,15 @@ question.set(false, 'Wrong, please try again');
 console.log(question.get('question'));
 console.log(question.size);
 
-// Delete Data
-question.delete(4);
+if(question.has(4)) {
+	// Delete Data
+	// question.delete(4);
+	console.log('Answer 4 is here');
+}
 
+// Clear everything from map
+// question.clear();
+question.forEach((value, key) => console.log(`This is ${key}, and it's set to ${value}`));
 
 
 
