@@ -166,7 +166,7 @@ var john = ['John', 26];
 // console.log(lastName);
 
 // Arrays in ES6
-const boxes = document.querySelectorAll('.box');
+// const boxes = document.querySelectorAll('.box');
 
 // Return nodelist and transform into array
 // ES5
@@ -188,64 +188,80 @@ const boxes = document.querySelectorAll('.box');
 // 	boxesArr5[i].textContent = 'I changed to blue';
 // }
 
-const boxesArr6 = Array.from(boxes);
-Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
+// const boxesArr6 = Array.from(boxes);
+// Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
 
-// ES6 Version
-for(const cur of boxesArr6) {
-	if (cur.className.includes('blue')) {
-		continue;
-	}
-	cur.textContent = 'I changed to blue';
+// // ES6 Version
+// for(const cur of boxesArr6) {
+// 	if (cur.className.includes('blue')) {
+// 		continue;
+// 	}
+// 	cur.textContent = 'I changed to blue';
 
+// }
+
+// // Find elements in an array using es5
+// var ages = [12, 17, 8, 21, 14, 11];
+// var full = ages.map(function(cur) {
+// 	return cur >= 18;
+// });
+// console.log(full);
+// // Find position of element in array
+// console.log(full.indexOf(true));
+// // Find oldest age in array
+// console.log(ages[full.indexOf(true)]);
+
+// // ES6 
+// console.log(ages.findIndex(cur => cur >= 18));
+// console.log(ages.find(cur => cur >= 18));
+
+// // Spread Operator
+// function addFourAges (a, b, c, d) {
+// 	return a + b + c + d;
+// }
+// var sum1 = addFourAges(18, 30, 12, 21);
+// console.log(sum1);
+
+// // Pass entire array into function
+// var ages = [18, 30, 12, 21];
+// // Use apply method and then call function using params
+// var sum2 = addFourAges.apply(null, ages);
+// console.log(sum2);
+
+// // ES6 using spread operator
+// const sum3 = addFourAges(...ages);
+// console.log(sum3);
+
+// const familySmith = ['John', 'Jane', 'Mark'];
+// const familyMiller = ['Mary', 'Bob', 'Ann'];
+// const bigFamily = [...familySmith, ...familyMiller];
+// console.log(bigFamily);
+
+// // Use spread on nodelist
+// const h = document.querySelector('h1');
+// const boxes = document.querySelectorAll('.box');
+// const all = [h, ...boxes];
+
+// Array.from(all).forEach(cur => cur.style.color = 'purple');
+
+
+// Rest parameters allow us to pass arbirtrary number of arguments into a function and to use them in function
+
+function isFullAge5() {
+	// console.log(arguments);
+	var argsArr = Array.prototype.slice.call(arguments);
+	argsArr.forEach(function(cur) {
+		console.log((2016 - cur) >= 18);
+	});
 }
+// isFullAge5(1990, 1999, 1965);
+// isFullAge5(1990, 1999, 1965, 2016, 1987);
 
-// Find elements in an array using es5
-var ages = [12, 17, 8, 21, 14, 11];
-var full = ages.map(function(cur) {
-	return cur >= 18;
-});
-console.log(full);
-// Find position of element in array
-console.log(full.indexOf(true));
-// Find oldest age in array
-console.log(ages[full.indexOf(true)]);
-
-// ES6 
-console.log(ages.findIndex(cur => cur >= 18));
-console.log(ages.find(cur => cur >= 18));
-
-// Spread Operator
-function addFourAges (a, b, c, d) {
-	return a + b + c + d;
-}
-var sum1 = addFourAges(18, 30, 12, 21);
-console.log(sum1);
-
-// Pass entire array into function
-var ages = [18, 30, 12, 21];
-// Use apply method and then call function using params
-var sum2 = addFourAges.apply(null, ages);
-console.log(sum2);
-
-// ES6 using spread operator
-const sum3 = addFourAges(...ages);
-console.log(sum3);
-
-const familySmith = ['John', 'Jane', 'Mark'];
-const familyMiller = ['Mary', 'Bob', 'Ann'];
-const bigFamily = [...familySmith, ...familyMiller];
-console.log(bigFamily);
-
-// Use spread on nodelist
-const h = document.querySelector('h1');
-const boxes = document.querySelectorAll('.box');
-const all = [h, ...boxes];
-
-Array.from(all).forEach(cur => cur.style.color = 'purple');
-
-
-// Rest parameters
+// ES6 version
+function isFullAge6(...years) {
+	years.forEach(cur => console.log((2016 - cur) >= 18));
+}	
+isFullAge6(1990, 1999, 1965);
 
 
 
