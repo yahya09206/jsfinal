@@ -288,6 +288,17 @@ function SmithPerson(FirstName, yearOfBirth, lastName = 'Smith', nationality = '
 var john = new SmithPerson('John', 1990);
 var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
 
+// Maps
+// Es5 maps
+const question = new Map();
+question.set('question', 'What is the official name of the last major Javascript version?');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+question.set(true, 'Correct answer :)');
+question.set(false, 'Wrong, please try again');
 
 
 
