@@ -323,7 +323,7 @@ for (let [key, value] of question.entries()) {
 }
 
 // Get answer using prompt
-const ans = parseInt(prompt('Write the correct answer'));
+// const ans = parseInt(prompt('Write the correct answer'));
 // console.log(question.get(ans === question.get('correct')));
 
 //Classes with es6
@@ -335,7 +335,7 @@ var Person5 = function(name, yearOfBirth, job) {
 }
 
 Person5.prototype.calculateAge = function() {
-	var age = Data().getFullYear - this.yearOfBirth;
+	var age = new Date().getFullYear - this.yearOfBirth;
 	console.log(age);
 }
 var john5 = new Person5('John', 1990, 'teacher');
@@ -348,10 +348,13 @@ class Person6 {
 		this.job = job;
 	}
 	calculateAge() {
-		var age = Data().getFullYear - this.yearOfBirth;
+		var age = new Date().getFullYear - this.yearOfBirth;
 		console.log(age);
 	}
 }
+const john6 = new Person('John', 1990, 'teacher');
+
+// Classes with subclasses
 
 
 
