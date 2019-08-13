@@ -289,7 +289,7 @@ var john = new SmithPerson('John', 1990);
 var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
 
 // Maps
-// Es5 maps
+// Es5 maps set data
 const question = new Map();
 question.set('question', 'What is the official name of the last major Javascript version?');
 question.set(1, 'ES5');
@@ -299,6 +299,16 @@ question.set(4, 'ES7');
 question.set('correct', 3);
 question.set(true, 'Correct answer :)');
 question.set(false, 'Wrong, please try again');
+
+// Get data from map
+console.log(question.get('question'));
+console.log(question.size);
+
+// Delete Data
+question.delete(4);
+
+
+
 
 
 
