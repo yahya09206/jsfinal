@@ -324,7 +324,9 @@ for (let [key, value] of question.entries()) {
 
 // Get answer using prompt
 const ans = parseInt(prompt('Write the correct answer'));
-console.log(question.get(ans === question.get('correct')));
+// console.log(question.get(ans === question.get('correct')));
+
+//Classes
 
 
 
