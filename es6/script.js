@@ -326,7 +326,32 @@ for (let [key, value] of question.entries()) {
 const ans = parseInt(prompt('Write the correct answer'));
 // console.log(question.get(ans === question.get('correct')));
 
-//Classes
+//Classes with es6
+//ES5 class
+var Person5 = function(name, yearOfBirth, job) {
+	this.name = name;
+	this.yearOfBirth = yearOfBirth;
+	this.job = job;
+}
+
+Person5.prototype.calculateAge = function() {
+	var age = Data().getFullYear - this.yearOfBirth;
+	console.log(age);
+}
+var john5 = new Person5('John', 1990, 'teacher');
+
+//ES6 version
+class Person6 {
+	constructor (name, yearOfBirth, job) {
+		this.name = name;
+		this.yearOfBirth = yearOfBirth;
+		this.job = job;
+	}
+	calculateAge() {
+		var age = Data().getFullYear - this.yearOfBirth;
+		console.log(age);
+	}
+}
 
 
 
