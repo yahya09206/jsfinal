@@ -55,11 +55,24 @@
 		});
 	};
 
+	// Get recipe thats related to publisher
+	const getRelated = publisher => {	
+		return new Promise((resolve, reject) => {
+			setTimeout(pub => {
+				const recipe = {title: 'Italian pizza', publisher: 'Johnny'};
+				resolve(`${pub}: ${recipe.title}`);
+			}, 1500, publisher);
+		});
+	};
 
 	getIDs
 	.then(IDs => {
 		console.log(IDs);
 		return getRecipe(IDs[2])
+	})
+	.then(recipe => {
+		console.log(recipe);
+		return getRelated(`Johnny`);
 	})
 	.then(recipe => {
 		console.log(recipe);
