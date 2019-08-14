@@ -39,31 +39,31 @@
 	// }
 	// getRecipe();
 	//Promises
-	const getIDs = new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve([523, 883, 432, 974]);
-		}, 1500);
-	});
+	// onst getIDs = new Promise((resolve, reject) => {
+	// 	setTimeout(() => {
+	// 		resolve([523, 883, 432, 974]);
+	// 	}, 1500);
+	// });
 
-	// Function to recieve id and return a promise
-	const getRecipe = recID => {
-		return new Promise((resolve, reject) => {
-			setTimeout(ID => {
-				const recipe = {title: 'Fresh tomato pasta', publisher: 'Johnny'};
-		 		resolve(`${ID}: ${recipe.title}`);
-			}, 1500, recID);
-		});
-	};
+	// // Function to recieve id and return a promise
+	// const getRecipe = recID => {
+	// 	return new Promise((resolve, reject) => {
+	// 		setTimeout(ID => {
+	// 			const recipe = {title: 'Fresh tomato pasta', publisher: 'Johnny'};
+	// 	 		resolve(`${ID}: ${recipe.title}`);
+	// 		}, 1500, recID);
+	// 	});
+	// };
 
-	// Get recipe thats related to publisher
-	const getRelated = publisher => {	
-		return new Promise((resolve, reject) => {
-			setTimeout(pub => {
-				const recipe = {title: 'Italian pizza', publisher: 'Johnny'};
-				resolve(`${pub}: ${recipe.title}`);
-			}, 1500, publisher);
-		});
-	};
+	// // Get recipe thats related to publisher
+	// const getRelated = publisher => {	
+	// 	return new Promise((resolve, reject) => {
+	// 		setTimeout(pub => {
+	// 			const recipe = {title: 'Italian pizza', publisher: 'Johnny'};
+	// 			resolve(`${pub}: ${recipe.title}`);
+	// 		}, 1500, publisher);
+	// 	});
+	// };c
 
 	// getIDs
 	// .then(IDs => {
@@ -82,15 +82,18 @@
 	// });
 
 	//Asycn Await
-	async function getRecipesAW(){
-		const IDs = await getIDs;
-		console.log(IDs);
-		const recipe = await getRecipe(IDs[2]);
-		console.log(recipe);
-		const related = await getRelated(`Johnny`);
-		console.log(related);
-	}
-	getRecipesAW();
+	// async function getRecipesAW(){
+	// 	const IDs = await getIDs;
+	// 	console.log(IDs);
+	// 	const recipe = await getRecipe(IDs[2]);
+	// 	console.log(recipe);
+	// 	const related = await getRelated(`Johnny`);
+	// 	console.log(related);
+	// }
+	// getRecipesAW();
+
+	// Ajax call
+
 </script>
 </body>
 </html>
