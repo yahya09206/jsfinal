@@ -19,6 +19,20 @@
 	// 	console.log('The end');
 	// }
 	// first();
+
+	function getRecipe() {
+		setTimeout(() => {
+			//Array of recipe id's
+			const recipeID = [523, 883, 432, 974];
+			console.log(recipeID);
+
+			setTimeout((id) => {
+				const recipe = {title: 'Fresh tomato pasta', publisher: 'Johnny'};
+				console.log(`${id}: ${recipe.title}`);
+			}, 1000, recipeID[2]);
+		}, 1500);
+	}
+	getRecipe();
 </script>
 </body>
 </html>
