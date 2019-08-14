@@ -45,10 +45,21 @@
 		}, 1500);
 	});
 
+	// Function to recieve id and return a promise
+	const getRecipe = recID => {
+		return new Promise((resolve, reject) => {
+			setTimeout(ID => {
+				const recipe = {title: 'Fresh tomato pasta', publisher: 'Johnny'};
+		 		resolve(`${ID}: ${recipe.title}`);
+			}, 1500, recID);
+		});
+	};
+
+
 	getIDs
 	.then(IDs => {
 		console.log(IDs);
-	});
+	})
 	.catch(error => {
 		console.log(error);
 	});
