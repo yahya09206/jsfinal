@@ -118,9 +118,9 @@
 			const result = await fetch(`http://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`);
 			const data = await result.json();
 			const tomorrow = data.consolidated_weather[1];
-			console.log(`temp tomorrow in ${data.title} stays between ${today.min_temp} and ${today.max_temp}.`);
+			console.log(`temp tomorrow in ${data.title} stays between ${tomorrow.min_temp} and ${tomorrow.max_temp}.`);
 		}catch(error){
-			console.log(error);
+			alert(error);
 		}
 	}
 	getWeatherAW(2487956);
