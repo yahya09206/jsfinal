@@ -15,3 +15,20 @@ let country = 'United States';
 let location = city + ' ' + country;
 
 console.log(location);
+
+/************
+	NUMBERS 
+************/
+let num = 5.5 + 2;
+console.log(num);
+
+let age = 28;
+let dogYears = (age + 1) / 7;
+console.log(dogYears);
+
+// Numbers challenge
+let studentScore = 18;
+let maxScore = 25;
+let percent = (studentScore / maxScore) * 100;
+
+console.log(percent);
