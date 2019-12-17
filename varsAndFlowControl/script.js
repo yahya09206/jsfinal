@@ -10,3 +10,8 @@ console.log(name);
 console.log(fullName);
 
 //Challenge 1
+let city = 'Seattle';
+let country = 'United States';
+let location = city + ' ' + country;
+
+console.log(location);
