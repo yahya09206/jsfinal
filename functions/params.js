@@ -27,15 +27,15 @@ let testScore = function(studentScore, scorePossible) {
 	let finalScore = scores * 100;
 
 	if (finalScore >= 90) {
-		return 'You got an A' + '(' + finalScore + ')';
+		return `You got an A ${finalScore}`;
 	} else if (finalScore < 90 && finalScore > 79) {
-		return 'You got a B' + '(' + finalScore + ')';
+		return `You got a B ${finalScore}`;
 	} else if (finalScore < 80 && finalScore > 69) {
-		return 'You got a C' + '(' + finalScore + ')';
+		return `You got a C ${finalScore}`;
 	} else if (finalScore < 70 && finalScore > 59) {
-		return 'You got a D' + '(' + finalScore + ')';
+		return `You got a D ${finalScore}`; 
 	} else {
-		return 'You got a F' + '(' + finalScore + ')';
+		return `You got a F ${finalScore}`;
 	}
 }
 
