@@ -22,3 +22,17 @@ let bookSummary = getSummary(myBook);
 let OtherBookSummary = getSummary(otherBook);
 
 console.log(bookSummary.pageCountSummary);
+
+// Conversion formulas
+// Celsius = (fahrenheit - 32) * 5 / 9
+// Kelvin = (fahrenheit + 459.67) * 5 / 9
+
+let getConversion = function(fahrenheit) {
+	return {
+		fahrenheit: fahrenheit,
+		kelvin: (fahrenheit + 459.67) * 5 / 9,
+		celsius: (fahrenheit - 32) * 5 / 9
+	}
+}
+let temps = getConversion(78);
+console.log(temps);
