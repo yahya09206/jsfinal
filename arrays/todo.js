@@ -12,7 +12,7 @@ const todos = [{
 }, {
 	title: 'Task for next couple of months',
 	body: 'Practice for interview',
-	completed: true
+	completed: false
 }, {
 	title: 'Gym Goals',
 	body: 'Get big',
@@ -22,6 +22,15 @@ const todos = [{
 	body: 'Find a wifey',
 	completed: false
 }];
+
+// Challenge for returning list of things to be yet completed
+const getThingsDone = function(todos){
+		return todos.filter(function (todo, index) {
+			return !todo.completed;
+	});
+}
+
+console.log(getThingsDone(todos));
 
 const deleteTodo = function(todos, todoText) {
 	const index = todos.findIndex(function(todo) {
@@ -33,8 +42,8 @@ const deleteTodo = function(todos, todoText) {
 	}
 };
 
-deleteTodo(todos, '!!goal for january');
-console.log(todos);
+// deleteTodo(todos, '!!goal for january');
+// console.log(todos);
 
 
 // todos.splice(2,1);
