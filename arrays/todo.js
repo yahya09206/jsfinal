@@ -23,6 +23,20 @@ const todos = [{
 	completed: false
 }];
 
+const orderCompleted = function(todos){
+	todos.sort(function(a, b) {
+		if (a.completed < b.completed) {
+			return -1;
+		}else if (b.completed < a.completed) {
+			return 1;
+		}else {
+			return 0;
+		}
+	});
+};
+
+orderCompleted(todos);
+console.log(todos);
 
 // Challenge for returning list of things to be yet completed
 const getThingsDone = function(todos){
@@ -31,7 +45,7 @@ const getThingsDone = function(todos){
 	});
 }
 
-console.log(getThingsDone(todos));
+// console.log(getThingsDone(todos));
 
 const deleteTodo = function(todos, todoText) {
 	const index = todos.findIndex(function(todo) {
