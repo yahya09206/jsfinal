@@ -20,6 +20,15 @@ notes.forEach(function (item, index) {
 	console.log(item);
 });
 
+for (let count = 0; count < notes.length; count++) {
+	console.log(notes[count]);
+}
+
+// Print in reverse
+for (let count = notes.length; count >= 0; count--) {
+	console.log(notes[count]);
+}
+
 
 // Print out length and specific item
 console.log(notes.length);
