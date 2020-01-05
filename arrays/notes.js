@@ -1,4 +1,29 @@
-const notes = ["Note 1", "Note 2", "Note 3"];
+const notes = [{
+	title: 'My next trip',
+	body: 'I would like to go to spain'
+}, {
+	title: 'My goal for 2020',
+	body: 'Get a job, get big'
+}, {
+	title: 'Life modifications',
+	body: 'Stay hungry'
+}];
+
+const findNote = function(notes, noteTitle) {
+	return notes.find(function (note, index) {
+		return note.title.toLowerCase() === noteTitle.toLowerCase();
+	})
+};
+
+// const findNote = function(notes, noteTitle) {
+// 	const index = notes.findIndex(function (note, index) {
+// 		return note.title.toLowerCase() === noteTitle.toLowerCase();
+// 	})
+// 	return notes[index];
+// };
+
+const note = findNote(notes, 'my next trip');
+console.log(note);
 
 // // Add item to end of notes array
 // notes.push('my new note');
@@ -12,24 +37,30 @@ const notes = ["Note 1", "Note 2", "Note 3"];
 // notes.splice(1, 0, 'This is the new 2nd item');
 // notes.splice(1, 1, 'This is the new 2nd item');
 
-notes[2] = 'This is now the new note 3';
-
 // Loop through list
-notes.forEach(function (item, index) {
-	console.log(index);
-	console.log(item);
-});
+// notes.forEach(function (item, index) {
+// 	console.log(index);
+// 	console.log(item);
+// });
 
-for (let count = 0; count < notes.length; count++) {
-	console.log(notes[count]);
-}
+// for (let count = 0; count < notes.length; count++) {
+// 	console.log(notes[count]);
+// }
 
 // Print in reverse
-for (let count = notes.length; count >= 0; count--) {
-	console.log(notes[count]);
-}
+// for (let count = notes.length; count >= 0; count--) {
+// 	console.log(notes[count]);
+// }
 
 
 // Print out length and specific item
-console.log(notes.length);
-console.log(notes);
+// console.log(notes.length);
+// console.log(notes);
+// // Find if note exists
+// // console.log(notes.indexOf({}));
+
+// const index = notes.findIndex(function(note, index) {
+// 	console.log(note);
+// 	return note.title === 'My next trip';
+// });
+// console.log(index);
