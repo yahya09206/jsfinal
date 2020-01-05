@@ -23,6 +23,7 @@ const todos = [{
 	completed: false
 }];
 
+
 // Challenge for returning list of things to be yet completed
 const getThingsDone = function(todos){
 		return todos.filter(function (todo, index) {
