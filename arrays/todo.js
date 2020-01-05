@@ -33,7 +33,7 @@ const deleteTodo = function(todos, todoText) {
 	}
 };
 
-deleteTodo(todos, 'goal for january');
+deleteTodo(todos, '!!goal for january');
 console.log(todos);
 
 

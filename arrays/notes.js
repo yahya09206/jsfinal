@@ -22,8 +22,25 @@ const findNote = function(notes, noteTitle) {
 // 	return notes[index];
 // };
 
-const note = findNote(notes, 'my next trip');
-console.log(note);
+// Return multiple notes
+const findNotes = function(notes, query){
+		return notes.filter(function (note, index) {
+		const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase());
+		const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase());
+		return isTitleMatch || isBodyMatch;
+	});
+}
+
+// Find note using search filter
+// const filteredNotes = notes.filter(function (note, index) {
+// 	const isTitleMatch = note.title.toLowerCase().includes('office');
+// 	const isBodyMatch = note.body.toLowerCase().includes('office');
+// 	return isTitleMatch || isBodyMatch;
+// });
+
+console.log(findNotes(notes, 'goal'));
+// const note = findNote(notes, 'my next trip');
+// console.log(note);
 
 // // Add item to end of notes array
 // notes.push('my new note');
