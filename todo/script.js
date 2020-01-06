@@ -35,6 +35,13 @@ todos.forEach(function (todo) {
 	document.querySelector('body').appendChild(p);
 });
 
+document.querySelector('#add-todo').addEventListener('click', function(e) {
+	e.target.textContent = 'This button was clicked';
+});
+
+document.querySelector('#new-todo').addEventListener('input', function(e){
+	console.log(e.target.value);
+})
 
 
 
