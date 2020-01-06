@@ -50,18 +50,12 @@ const renderTodos = function(todos, filters){
 
 renderTodos(todos, filters);
 
-document.querySelector('#add-todo').addEventListener('click', function(e) {
-	e.target.textContent = 'This button was clicked';
-});
-
-document.querySelector('#new-todo').addEventListener('input', function(e){
-	console.log(e.target.value);
-});
-
 document.querySelector('#search-text').addEventListener('input', function(e){
 	filters.searchText = e.target.value;
 	renderTodos(todos, filters);
 });
+
+
 
 
 
