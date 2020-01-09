@@ -15,6 +15,13 @@ const filters = {
 	searchText: ''
 }
 
+// CRUD for local storage
+// localStorage.setItem('Location', 'Seattle');
+
+// Read getItem
+console.log(localStorage.getItem('Location'));
+
+
 const renderNotes = function(notes, filters){
 	const filteredNotes = notes.filter(function(note){
 		return note.title.toLowerCase().includes(filters.searchText.toLowerCase());
