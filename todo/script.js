@@ -1,26 +1,26 @@
-const todos = [{
-	title: 'Goal for 2020',
-	body: 'Get a job',
-	completed: false
-}, {
-	title: 'Goal for January',
-	body: 'Get ready for nikkah',
-	completed: false
-}, {
-	title: 'Task for next couple of months',
-	body: 'Practice for interview',
-	completed: false
-}, {
-	title: 'Gym Goals',
-	body: 'Get big',
-	completed: true
-}, {
-	title: 'Longterm goal',
-	body: 'Find a wifey',
-	completed: false
-}];
+// const todos = [{
+// 	title: 'Goal for 2020',
+// 	body: 'Get a job',
+// 	completed: false
+// }, {
+// 	title: 'Goal for January',
+// 	body: 'Get ready for nikkah',
+// 	completed: false
+// }, {
+// 	title: 'Task for next couple of months',
+// 	body: 'Practice for interview',
+// 	completed: false
+// }, {
+// 	title: 'Gym Goals',
+// 	body: 'Get big',
+// 	completed: true
+// }, {
+// 	title: 'Longterm goal',
+// 	body: 'Find a wifey',
+// 	completed: false
+// }];
 
-// let todos = [];
+let todos = [];
 
 const filters = {
 	searchText: '',
@@ -34,18 +34,20 @@ if (todosJSON !== null) {
 }
 
 const renderTodos = function(todos, filters){
-	let filteredTodos = todos.filter(function(todo){
-		return todo.title.toLowerCase().includes(filters.searchText.toLowerCase());
+	const filteredTodos = todos.filter(function(todo){
+		const searchTextMatch = todo.title.toLowerCase().includes(filters.searchText.toLowerCase());
+		const hideCompletedMatch = !filters.hideCompleted || !todo.completed;
+		return searchTextMatch && hideCompletedMatch;
 	});
 
-	filteredTodos = filteredTodos.filter(function(todo) {
-		return !filters.hideCompleted || !todo.completed;
-		// if (filters.hideCompleted) {
-		// 	return !todo.completed;
-		// }else{
-		// 	return true;
-		// }
-	});
+	// filteredTodos = filteredTodos.filter(function(todo) {
+	// 	return !filters.hideCompleted || !todo.completed;
+	// 	// if (filters.hideCompleted) {
+	// 	// 	return !todo.completed;
+	// 	// }else{
+	// 	// 	return true;
+	// 	// }
+	// });
 
 	//Check how many todos are not completed
 	const incompleteTodos = filteredTodos.filter(function(todo) {
@@ -60,16 +62,10 @@ const renderTodos = function(todos, filters){
 
 	filteredTodos.forEach(function (todo) {
 		const p = document.createElement('p');
-		if (todo.title.length > 0) {
-			p.textContent = todo.title;
-		}else {
-			p.textContent = 'Unnamed todo';
-		}
-		// p.textContent = todo.title;
+		p.textContent = todo.title;
 		document.querySelector('#todos').appendChild(p);
-	})
-	
-}
+	});	
+};
 
 renderTodos(todos, filters);
 
@@ -84,7 +80,8 @@ document.querySelector('#todo-form').addEventListener('submit', function(e) {
 	todos.push({
 		title: e.target.elements.addTodo.value,
 		completed: false
-	})
+	});
+	localStorage.setItem('todos', JSON.stringify(todos));
 	renderTodos(todos, filters);
 	e.target.elements.addTodo.value = '';
 });
