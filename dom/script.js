@@ -78,7 +78,7 @@ document.querySelector('#create-note').addEventListener('click', function(e) {
 	notes.push({
 		title: '',
 		body: ''
-	})
+	});
 	// Save new array to local storage
 	localStorage.setItem('notes', JSON.stringify(notes));
 	renderNotes(notes, filters);
