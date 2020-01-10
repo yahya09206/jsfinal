@@ -10,7 +10,7 @@
 // 	body: 'Do more work'
 
 // }];
-let notes = [];
+const notes = getSavedNotes();
 
 const filters = {
 	searchText: ''
@@ -41,13 +41,6 @@ const filters = {
 // const userJSON = localStorage.getItem('user');
 // const user = JSON.parse(userJSON);
 // console.log(`${user.name} is ${user.age}`);
-
-//Check for existing saved data
-const notesJSON = localStorage.getItem('notes');
-
-if (notesJSON !== null) {
-	notes = JSON.parse(notesJSON);
-}
 
 
 const renderNotes = function(notes, filters){
