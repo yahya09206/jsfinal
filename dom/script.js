@@ -12,9 +12,8 @@ document.querySelector('#create-note').addEventListener('click', function(e) {
 	notes.push({
 		title: '',
 		body: ''
-	});
-	// Save new array to local storage
-	localStorage.setItem('notes', JSON.stringify(notes));
+	})
+	saveNotes(notes);
 	renderNotes(notes, filters);
 });
 
@@ -24,7 +23,7 @@ document.querySelector('#search-text').addEventListener('input', function(e){
 });
 
 document.querySelector('#for-fun').addEventListener('change', function(e) {
-	console.log(e.target.checked)
+	console.log(e.target.value)
 });
 
 

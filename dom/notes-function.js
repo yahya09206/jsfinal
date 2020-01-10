@@ -8,7 +8,13 @@ const getSavedNotes = function(){
 		// if there is no data return empty array
 		return [];
 	}
-}
+};
+
+// Save the notes to localStorage
+const saveNotes = function(notes) {
+	// Save new array to local storage
+	localStorage.setItem('notes', JSON.stringify(notes));
+};
 
 // Generate the DOM structure for a note
 const generateNoteDom = function (note) {
@@ -21,13 +27,13 @@ const generateNoteDom = function (note) {
 	}
 	// Return new note
 	return noteElement;
-}
+};
 
 // Render Application Notes
 const renderNotes = function(notes, filters){
 	const filteredNotes = notes.filter(function(note){
 		return note.title.toLowerCase().includes(filters.searchText.toLowerCase());
-	});
+	})
 
 	// Clear element
 	document.querySelector('#notes').innerHTML = '';
@@ -35,5 +41,5 @@ const renderNotes = function(notes, filters){
 	filteredNotes.forEach(function(note) {
 		const noteElement = generateNoteDom(note);
 		document.querySelector('#notes').appendChild(noteElement);
-	});
+	})
 };
