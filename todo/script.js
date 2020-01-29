@@ -20,17 +20,11 @@
 // 	completed: false
 // }];
 
-let todos = [];
+let todos = getSavedTodos();
 
 const filters = {
 	searchText: '',
 	hideCompleted: false
-}
-
-const todosJSON = localStorage.getItem('todos');
-
-if (todosJSON !== null) {
-	todos = JSON.parse(todosJSON);
 }
 
 const renderTodos = function(todos, filters){
